@@ -1,0 +1,120 @@
+$body-color: #000 !default;
+$body-bg: #fff !default;
+
+$font-size-base: 16px !default;
+$line-height-base: 1.4 !default;
+$font-family-base: Arial, sans-serif !default;
+$p-margin-bottom: 15px !default;
+
+$link-color: blue !default;
+$link-decoration: none !default;
+$link-color-hover: lighten($link-color, 10%)!default;
+$link-decoration: none !default;
+$link-decoration-hover: none!default;
+
+$heading-font-family: inherit !default;
+$heading-font-weight: 700 !default;
+$heading-color: inherit !default;
+
+$heading-font-size-1: 36px !default;
+$heading-margin-1: 1em !default;
+
+$heading-font-size-2: 30px !default;
+$heading-margin-2: 1em !default;
+
+$heading-font-size-3: 24px !default;
+$heading-margin-3: 1em !default;
+
+$heading-font-size-4: 18px !default;
+$heading-margin-4: 1em !default;
+
+$heading-font-size-5: 14px !default;
+$heading-margin-5: 1em !default;
+
+$heading-font-size-6: 12px !default;
+$heading-margin-6: 1em !default;
+
+body {
+	color: $body-color;
+	background-color: $body-bg;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	font-family: $font-family-base;
+	font-weight: $font-weight-base;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-family: $heading-font-family;
+	color: $heading-color;
+	font-weight: $heading-font-weight;
+}
+h1,.h1 {
+	font-size: $heading-font-size-1;
+	margin-bottom: $heading-margin-1;
+	max-width: 700px;
+	margin: 0 auto 60px auto;
+	line-height: 1.2em;
+}
+h2,.h2 {
+	font-size: $heading-font-size-2;
+	margin-bottom: $heading-margin-2;
+}
+h3,.h3 {
+	font-size: $heading-font-size-3;
+	margin-bottom: $heading-margin-3;
+}
+
+p, .h1, .h2, .h3 {
+	text-align: center;
+}
+p {
+	margin-top: 0;
+	margin-bottom: $p-margin-bottom;
+}
+p.main {
+	padding: 0 150px;
+}
+p.big {
+	font-size: 20px;
+}
+.regular {
+	font-weight: 400;
+}
+a {
+	color: $link-color;
+	text-decoration: $link-decoration; 
+	&:hover {
+		color: $link-color-hover;
+		text-decoration: $link-decoration-hover; 
+	}
+}
+.h3 {
+	font-weight: 400;
+}
+.h2-line {
+	margin-bottom: 50px;
+}
+.h2-line:after {
+	content: "";
+	display: block;
+	position: relative;
+	@extend .center;
+	top: 25px;
+	height: 2px;
+	width: 170px;
+	background-color: $color-brand;
+}
+.highlight {
+	color: $color-brand;
+}
+p.quote {
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+p.quote-signature {
+	margin: 50px 0 25px;
+}

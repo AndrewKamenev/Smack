@@ -1,0 +1,114 @@
+$form-color: red !default;
+$form-bg: #eaeef1 !default;
+$form-border: 1px solid #eaeef1 !default;
+$form-border-radius: 2px !default;
+$form-height: 44px !default;
+$form-padding-x: 20px !default;
+$form-font-size: 14px !default;
+$form-line-height: 1.4 !default;
+$form-margin-bottom: 15px !default;
+
+$form-label-color: #eaeef1 !default;
+$form-label-font-size: 14px !default;
+$form-label-margin-bottom: 4px !default;
+
+
+@mixin placeholder($color, $opacity: 1) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        @content;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+        @content;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        @content;
+    }
+}
+
+@mixin form-variants($color, $bg, $border-color) {
+    color: $color;
+    background-color: $bg;
+    border-color: $border-color;
+}
+
+@mixin form-size($height, $padding, $font-size, $border-radius: $form-border-radius, $line-height: $form-line-height) {
+    $padding-y: ($height - ($font-size * $form-line-height)) / 2;
+    font-size: $font-size;
+    border-radius: $border-radius;
+    height: $height;
+    line-height: $line-height;
+    padding: $padding-y $padding;
+}
+
+
+.form {
+    &-group {
+        margin-bottom: $form-margin-bottom;
+    }
+    &-control {
+        width: 100%;
+        display: block;
+        position: relative;
+        color: $form-color;
+        font-size: $form-font-size;
+        background-color: $form-bg;
+        border: $form-border;
+        border-radius: $form-border-radius;
+        height: $form-height;
+        line-height: $form-line-height;
+        $padding-y: ($form-height - ($form-font-size * $form-line-height)) / 2;
+        padding: $padding-y $form-padding-x;
+        z-index: 2;
+        @include placeholder(#fff);
+        // font-weight: 300;
+
+        &:focus {
+            outline: none;
+            border-color: $color-brand;
+            transition: all 0.5s;
+        }
+
+        &:focus ~ .form-label{
+            top: -18px; 
+            left: 20px; 
+            font-size: 12px; 
+            color: $color-brand; 
+            transition: 0.3s;
+        }
+    }
+    &-label {
+        display: block;
+        color: $form-label-color;
+        font-size: $form-label-font-size;
+        margin-bottom: $form-label-margin-bottom;
+         position: absolute; 
+        left: 30px; 
+        width: 100%; 
+        top: 20px; 
+        transition: 0.3s; 
+        z-index: 1; 
+        // letter-spacing: 0.5px;
+    }
+}
+.has-content ~ .form-label {
+            top: -18px; 
+            left: 20px; 
+            font-size: 12px; 
+            color: $form-color; 
+            transition: 0.3s;
+        }
+
+input:focus:invalid {
+    border-color: red;
+    color: red; 
+}
+textarea.form-control {
+    height: 222px;
+    padding-left: 0;
+}

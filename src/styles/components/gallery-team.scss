@@ -1,0 +1,161 @@
+.tabs {
+	list-style: none;
+	a {
+		outline: none;
+	}
+	&-item {
+		margin-bottom: 30px;
+		text-align: center;
+		font-weight: 400;
+		img {
+			-webkit-filter: sepia(0) blur(0);
+			filter: sepia(0) blur(0);
+			-webkit-transition: .3s ease-in-out;
+			transition: .4s ease-in-out;
+		}
+		&:hover img {
+			-webkit-filter: sepia(100%) blur(3px);
+			filter: sepia(100%) blur(3px);
+		}
+		&-name {
+			
+			font-size: 20px;
+			color: $color-brand;
+			margin-top: 15px;
+		}
+		&-sig {
+			font-size: 16px;
+			padding-bottom: 13px;
+			border-bottom: 2px solid #dfe4e5;
+			// text-align: center;
+		}
+	}
+	&-content {
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: left;
+		color: $color-inverse;
+		padding: 60px 0 40px;
+		transition: 1s;
+		outline: none;
+		.name {
+			font-size: 20px;
+			color: $color-brand;
+			margin-bottom: 20px;
+			display: inline-block;
+		}
+		p {
+			text-align: left;
+		}
+	}
+	.close-button {
+		float: right;
+		width: 15px;
+		height: 15px;
+		margin-top: 15px;
+		background:url(../images/close.png) no-repeat 0 0;
+	}
+	.social a {
+		text-align: center;
+		width: 37px;
+		height: 37px;
+		line-height: 35px;
+		border: 1px solid $color-inverse;
+		display: inline-block;
+		margin-right: 24px;
+		color: $color-inverse;
+	}
+	.social a:hover{
+		color: $color-brand;
+		border-color: $color-brand;
+	}
+}
+.ui-tabs-nav{
+	list-style: none;
+}
+
+.ui-tabs-active .tabs-item:after, .ui.state.active .tabs-item:after{
+	position: absolute;
+	content:'';
+	width: 58px;
+	height: 20px;
+	top:calc(100% + 4px);
+	left:calc(50% - 29px);
+	background: #fff url(../images/arrow.png) no-repeat 100% 50%;
+}
+
+
+.tabs-gallery {
+	a {
+		outline: none;
+	}
+	&-item {
+		outline: none;
+		&-pict {
+			width: 55%;
+			float: left;
+			margin-right: 30px;
+			img {
+				width: 100%;
+			}
+		}
+		&-text {
+			.title {
+				font-size: 25px;
+				font-weight: 400;
+				margin-bottom: 20px;
+			}
+			.btn {
+				margin-top: 20px;
+				display: inline-block;
+			}
+		}
+	}
+	.tabs-gallery-icons {
+		padding-left: 0;
+		font-size: 0;
+		margin-top: 50px;
+		.tabs-gallery-icon {
+			width: 16.6%;
+			display: inline-block;
+			overflow: hidden;
+			position: relative;
+			img {
+				width: 100%;
+			}
+			a:hover > img {
+				opacity: 0.1;
+				transition: .5s ease;
+				transform: scale(1.5);
+			}
+			.hover-text {
+				/*display: none;*/
+				text-align: center;
+				padding-top: 30%;
+				color: #fff;
+				position: absolute;
+				z-index: 50;
+				background: rgba(255,230,0,0.8);
+				top: 0;
+				/*bottom: 0;*/
+				left: 0;
+				/*right: 0;*/
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+			.hover-text .large {
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.hover-text p {
+				margin: 0;
+			}
+			.hover-text .small {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+ 

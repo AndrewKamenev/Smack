@@ -1,0 +1,102 @@
+@media all and (max-width: 768px) {
+	.container {
+		padding: 0 10px;
+	}
+	
+	input {
+		margin-bottom: $form-margin-bottom;
+	}
+	.block-header {
+		// background: none;
+	}
+	.wrapper-h1 {
+		margin-top: 30px;
+		// height: 80px;
+	}
+	.mobile {
+		display: block;
+		margin: 20px 10px;
+		width: 50px;
+		height: 50px;
+		float: right;
+		cursor: pointer;
+		span {
+			height: 8px;
+			width: 50px;
+			margin-bottom: 8px;
+			display: inline-block;
+			background-color: #fff;
+		}
+	}
+
+	.mobile-close {
+		width: 50px;
+		height: 50px;
+		position: relative;
+		float: right;
+		cursor: pointer;
+		&:before, &:after {
+			content: "";
+			display: inline-block;
+			width: 50px;
+			height: 8px;
+			position: absolute;
+			top: 30px;
+			transform: rotate(45deg);
+			background: #fff;
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+	
+
+	.ul-menu {
+		float: none;
+		width: 100%;
+	}
+	.collapse {
+		display: none;
+		width: 100%;
+		.ul-menu {
+			width: 100%;
+			clear: both;
+			display: block;
+			background: $color-dark;
+			li {
+				display: block;
+				text-align: center;
+				&:after {
+					display: none;
+				}
+				a {
+					font-size: 30px;
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+	.progressbars-wrapper ul li{
+		margin-bottom: 30px;
+	}
+	p.main {
+		padding: 0 20px;
+	}
+	.tabs-item:after {
+		display: none;
+	}
+	.tabs-gallery .tabs-gallery-icons .tabs-gallery-icon {
+		width: 25%;
+		min-width: 100px;
+	}
+	.counter-block:first-child {
+		margin-bottom: 20px;
+	}
+	.feature-description {
+		margin-bottom: 40px;
+	}
+	.visible-xs-block {
+	    display: block !important;
+	    clear: both;
+	}
+}

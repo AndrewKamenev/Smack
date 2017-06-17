@@ -1,0 +1,72 @@
+.feature{
+	&-box{
+		position: relative;
+		text-align: center;
+		color: $color-inverse;
+		border-radius: 50%;
+		background-color: $color-brand;
+		cursor: pointer;
+		transition: box-shadow 0.2s;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			top: 0;
+			left: 0;
+			box-shadow: 0 0 0 3px $color-brand;
+			transition: transform 0.2s, opacity 0.2s;
+		}
+		&:hover:after {
+			transform: scale(0.8);
+			opacity: 0.5;
+		}
+		&:hover {
+			box-shadow: 0 0 0 10px $color-brand;
+			color: $color-brand;
+			background: transparent;
+		}
+
+		&-big {
+			width: 108px;
+			height: 108px;
+			line-height: 108px;
+			font-size: 3em;
+			margin: 0 auto;
+		}
+		&-small {
+			width: 70px;
+			height: 70px;
+			line-height: 70px;
+			font-size: 2.5em;
+			margin-right: 30px;
+			float: left;
+		}
+	}
+	&-img{
+		margin: 0 auto;
+		color: $color-brand;
+		font-size: 3em;
+		text-align: center;
+	}
+	&-title{
+		padding: 20px 0;
+		font-size: 20px;
+		text-align: center;
+		font-weight: 700;
+	}
+	&-description{
+		text-align: center;
+	}
+	&-subtitle{
+		color: $color-subtitle;
+		font-weight: 400;
+		font-size: 1.2em;
+	}
+	&-text{
+		text-align: left;
+		padding: 5px 30px 30px 100px;
+	}
+}
+

@@ -1,0 +1,84 @@
+@import 'components/variables.scss';
+
+@import '_bootstrap.scss';
+@import 'components/global.scss';
+@import 'components/type.scss';
+@import 'components/btns.scss';
+@import 'components/forms.scss';
+@import 'components/blocks.scss';
+@import 'components/features.scss';
+@import 'components/gallery-team.scss';
+@import 'components/counters.scss';
+@import 'components/sliders.scss';
+@import 'components/media.scss';
+
+
+
+
+.ul-menu {
+	float: right;
+	display: inline-block;
+	padding: 25px;
+	li {
+		display: inline-block;
+		position: relative;
+		margin-left: 40px;
+	}
+	.active > a {
+			color: $color-brand;
+		}
+	li:after {
+		content:'';
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		background-color: $color-brand;
+		position: absolute;
+		top: 40%;
+		right: -25px;
+	}
+	li:last-child:after {
+		display: none;
+	}
+}
+.logo {
+	width: 105px;
+	margin-top: 15px;
+}
+.wrapper-h1 {
+	background: $color-dark-opacity;
+	padding: 50px 0;
+}
+
+.gallery-links {
+	.ul-menu {
+		display: block;
+		float: none;
+		text-align: center;
+	}
+}
+ $step-margin: 10px !default;
+ $numbers-steps-margin: 10 !default;
+ $color-inverse: white !default;
+
+// classes for margins
+ @for $step-margin from 1 through $numbers-steps-margin {
+            .mb#{$step-margin}0 {
+                margin-bottom: $step-margin*$numbers-steps-margin+'px';
+            }
+        }
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.center {
+	margin: 0 auto;
+}
+.inverse {
+	color: $color-inverse !important;
+}
+.text-center {
+	text-align: center;
+}

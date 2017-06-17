@@ -1,0 +1,48 @@
+$container-width: 1170px !default;
+$container-gutter: 0 10px !default;
+
+$color-brand: #ffe600;
+$color-dark: rgba(19,19,22,0.95);
+$color-dark-opacity: rgba(19, 19, 22, 0.5);
+$color-darkest: #131316;
+$color-light: #fbfbfb;
+$color-inverse: #fff;
+
+$color-text: #707070;
+$color-subtitle: #515151;
+
+$line-height-base: 1.56;
+$font-family-base: 'Oswald', Arial, sans-serif;
+$font-weight-base: 300;
+$p-margin-bottom: 50px;
+
+$link-color: #000;
+$link-color-hover: $color-brand;
+
+$heading-font-size-1: 65px;
+$heading-margin-1: 60px;
+$heading-margin-2: 30px;
+
+$heading-font-size-3: 16px;
+$heading-margin-3: 0px;
+
+$btn-color: #fff;
+$btn-font-size: 20px;
+$btn-bg: $color-brand;
+$btn-border: 2px solid $btn-bg;
+$btn-border-radius: none;
+$btn-padding: 20px 50px;
+
+$btn-color-hover:  $color-brand;
+$btn-bg-hover: #fff;
+$btn-border-color-hover: $color-brand;
+
+$form-color: $color-inverse;
+$form-bg: transparent;
+$form-border: 1px solid $color-inverse !default;
+$form-border-radius: none;
+$form-height: 60px;
+$form-padding-x: 20px;
+$form-font-size: 15px;
+
+$form-margin-bottom: 25px;

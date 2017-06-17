@@ -1,0 +1,54 @@
+.block {
+	padding: 60px 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	&-header {
+		display: table-header-group;
+		height: 1%;
+	}
+	&-content {
+		display: table-row-group;
+	}
+	&-footer {
+		display: table-footer-group;
+		height: 1%;
+	}
+	&-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&-collapse {
+		padding: 0;
+	}
+	&-fill-height {
+		height: 100vh;
+	}
+	&-inverse {
+		color: $color-inverse;
+		background-color: $color-dark;
+	}
+	&-light {
+		background-color: $color-light;
+	}
+	&-dark {
+		background-color: $color-darkest;
+	}
+	&-overlay {
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			background-color: inherit;
+			opacity: 0.5;
+		}
+	}
+}
